@@ -1,0 +1,183 @@
+
+#body{
+    width:300px;
+    background-color:transparent;
+	font-family: arial;
+    margin:0 auto 0 auto;
+    padding:0;
+}
+
+#body ul, li{
+    clear:both;
+    line-height: 16px;
+}
+
+.refresh {
+	color: #777;
+	text-decoration: none;
+	font-size: 11px;
+}
+
+.refresh:hover {
+    color:#999;
+}
+
+#ip{
+    color:#777;
+    font-size:12px;
+	font-weight: bold;
+    text-decoration:none;
+}
+
+#ip:hover {
+    color:#999;
+}
+
+.channel {
+    color:#777;
+    font-size:12px;
+}
+
+.channel img {
+	padding-right:5px;
+	padding-bottom:2px;
+	float:left;
+}
+
+.player {
+	color: #2e5c5c;
+    font-size:12px;
+}
+
+.player img {
+	padding-right:5px;
+	padding-bottom:2px;
+	float:left;
+}
+
+.servergroups h3 {
+    color:#777;
+    font-size:12px;
+    margin-top:15px;
+    margin-bottom:12px;
+    padding:0;
+}
+
+.servergroups {
+    color:#777;
+    font-size:12px;
+	padding-top:1px;
+    width:50%;
+    float:left;
+}
+
+.servergroups img {
+	padding-right:10px;
+	padding-bottom:5px;
+	float:left;
+}
+
+.servergroups.icon, .channelgroups.icon {
+	width:25px;
+}
+
+.channelgroups h3 {
+    color:#777;
+    font-size:12px;
+    margin-top:15px;
+    margin-bottom:12px;
+    padding:0;
+}
+
+.channelgroups {
+    color:#777;
+    font-size:12px;
+	padding-top:1px;
+    width:100%;
+}
+
+.channelgroups.container {
+    font-size:12px;
+    width:50%;
+    float:left;
+}
+
+.channelgroups img {
+	padding-right:10px;
+	padding-bottom:5px;
+	float:left;
+}
+.status {
+	clear:both;
+	padding-top:1px;
+}
+
+.status h3 {
+    color:#777;
+    font-size:12px;
+    margin-top:15px;
+    margin-bottom:12px;
+    padding:0;
+}
+
+.status_clear {
+	clear:both;
+	padding-top:1px;
+}
+
+.status table td {
+    color:#777;
+    font-size:12px;
+    text-align:left;
+    vertical-align:text-bottom; 
+    margin-top:0;
+    margin-bottom:0;
+    padding-top:0;
+    padding-bottom:0;
+	width:40%;
+}
+
+.status img {
+	padding-right:10px;
+	padding-bottom:5px;
+	float:left;
+}
+
+.error {
+	color: #FF0000;
+	font-family: Verdana;
+	font-size: 14px;
+	font-weight: bold;
+    vertical-align:text-bottom; 
+}
+
+.leer {
+    width:20px;
+    float:left;
+}
+
+ul .channellist, ul .playerlist {
+   list-style-type:none;
+   padding-left:16px;
+}
+
+.iconcontainer{
+   float:right;
+}
+
+.spacer_center {
+    text-align: center;
+}
+
+.spacer_right {
+    text-align: right;
+}
+
+.spacer_left {
+    text-align: left;
+}
+
+.spacer_repeat {
+    text-align: left;
+    overflow: hidden;
+}
