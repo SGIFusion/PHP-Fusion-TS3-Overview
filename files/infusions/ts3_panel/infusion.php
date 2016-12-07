@@ -30,7 +30,7 @@ include INFUSIONS."ts3_panel/infusion_db.php";
 
 $inf_title = "Teamspeak 3 Panel";
 $inf_description = "Teamspeak 3 Panel";
-$inf_version = "1.4";
+$inf_version = "1.5";
 $inf_developer = "Septron &amp; Harlekin";
 $inf_email = "support@septron.de";
 $inf_weburl = "http://www.septron.de";
