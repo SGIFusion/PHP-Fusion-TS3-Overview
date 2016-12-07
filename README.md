@@ -2,7 +2,7 @@
  
 <strong>Teamspeak&sup3; Overview 3rd Addon
 </strong><br>Authors: Septron, Harlekin, PlanetTeamspeak, ts3admin
-<br>Version: 1.4
+<br>Version: 1.5
 <br>PHP-Fusion: v7.02.xx
 <br>E-Mail: support@septron.de
 <br>Webseite: https://www.septron.de
