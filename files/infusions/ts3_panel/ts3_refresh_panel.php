@@ -5,7 +5,7 @@
 | http://www.php-fusion.co.uk/
 +--------------------------------------------------------+
 | Name: SGI Fusion TS3 Viewer (für v7.02.xx)
-| Filename: ts3_panel.php
+| Filename: ts3_refresh_panel.php
 | Authors: Septron, Harlekin, PlanetTeamspeak, ts3admin
 | Support Website: http://www.septron.de
 |				   http://www.septron.eu
@@ -26,7 +26,6 @@
 | written permission from the original author(s).
 +--------------------------------------------------------*/
 require_once "../../maincore.php";
-#if (!defined("IN_FUSION")) { die("Access Denied"); }
 include INFUSIONS."ts3_panel/infusion_db.php";
 require_once INFUSIONS."ts3_panel/framework/libraries/TeamSpeak3/TeamSpeak3.php";
 
@@ -68,19 +67,19 @@ echo "<style type='text/css' media='screen'>
       overflow: hidden;
     }
 	table.ts3_viewer td.spacer.solidline {
-      background: url('".INFUSIONS."ts3_panel/images/viewer_sgifusion_metro/spacer_solidline.gif');
+      background: url('".INFUSIONS."ts3_panel/images/viewer/spacer_solidline.gif');
 		background-repeat: repeat-x;
     }
     table.ts3_viewer td.spacer.dashline {
-      background: url('".INFUSIONS."ts3_panel/images/viewer_sgifusion_metro/spacer_dashline.gif');
+      background: url('".INFUSIONS."ts3_panel/images/viewer/spacer_dashline.gif');
 		background-repeat: repeat-x;
     }
     table.ts3_viewer td.spacer.dashdotline {
-      background: url('".INFUSIONS."ts3_panel/images/viewer_sgifusion_metro/spacer_dashdotline.gif');
+      background: url('".INFUSIONS."ts3_panel/images/viewer/spacer_dashdotline.gif');
 		background-repeat: repeat-x;
     }
     table.ts3_viewer td.spacer.dashdotdotline {
-      background: url('".INFUSIONS."ts3_panel/images/viewer_sgifusion_metro/spacer_dashdotdotline.gif');
+      background: url('".INFUSIONS."ts3_panel/images/viewer/spacer_dashdotdotline.gif');
 		background-repeat: repeat-x;
     }
     table.ts3_viewer td.spacer.dotline {
@@ -191,7 +190,7 @@ while($data = dbarray($sdata_panel)) {
 try
 {
 	$ts3_VirtualServer = TeamSpeak3::factory("serverquery://".$host.":".$query_port."/?server_port=".$port."#no_query_clients");
-	echo "<span style='font-size: 9px; color: #000000;'>".$ts3_VirtualServer->getViewer(new TeamSpeak3_Viewer_Html("".INFUSIONS."ts3_panel/images/viewer_sgifusion_metro/", "".INFUSIONS."ts3_panel/images/flags/", "data:image"))."</span>";
+	echo "<span style='font-size: 9px; color: #000000;'>".$ts3_VirtualServer->getViewer(new TeamSpeak3_Viewer_Html("".INFUSIONS."ts3_panel/images/viewer/", "".INFUSIONS."ts3_panel/images/flags/", "data:image"))."</span>";
 	echo "<br />";
 	if ($panel_button == "1") {
 		if (iMEMBER) {
