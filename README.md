@@ -100,6 +100,14 @@ Das war es auch schon.<br /><br />
 
 <h2>Update Informationen</h2>
 <p><ul> 
+            <li>Version 1.5 
+            	<ul>
+                    <li>- ts3_panel.php &uuml;berarbeitet &amp; bugfixes</li>
+                    <li>- ts3_panel.php 20 Sekunden refresh hinzugef&uuml;gt</li>
+                    <li>- ts3_refresh_panel.php hinzugef&uuml;gt</li>
+                </ul>
+         </ul></p>
+<p><ul> 
             <li>Version 1.4 
             	<ul>
                     <li>- ts3_admin.php bugfixes</li>
