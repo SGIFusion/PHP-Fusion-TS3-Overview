@@ -6,16 +6,16 @@
 +--------------------------------------------------------+
 | Name: SGI Fusion TS3 Viewer (für v7.02.xx)
 | Filename: infusion.php
-| Authors: Septron, Harlekin, PlanetTeamspeak, ts3admin
+| Authors: Septron, Harlekin, PlanetTeamspeak
 | Support Website: http://www.septron.de
 |				   http://www.septron.eu
 |				   http://www.septron.net
 |				   http://www.septron.org
 |				   http://www.septron.info
-|				   http://phpfusion-deutschland.de
-|				   http://harlekinpower.de
+|				   http://www.phpfusion-deutschland.de
+|				   http://www.phpfusion-supportclub.de
+|				   http://www.harlekinpower.de
 |				   https://www.planetteamspeak.com
-|				   http://ts3admin.info
 +--------------------------------------------------------+
 | This program is released as free software under the
 | Affero GPL license. You can redistribute it and/or
@@ -30,7 +30,7 @@ include INFUSIONS."ts3_panel/infusion_db.php";
 
 $inf_title = "Teamspeak 3 Panel";
 $inf_description = "Teamspeak 3 Panel";
-$inf_version = "1.5";
+$inf_version = "1.6";
 $inf_developer = "Septron &amp; Harlekin";
 $inf_email = "support@septron.de";
 $inf_weburl = "http://www.septron.de";
@@ -43,9 +43,6 @@ query_port VARCHAR(255) NOT NULL DEFAULT '',
 port VARCHAR(255) NOT NULL DEFAULT '',
 panel_button VARCHAR(10) NOT NULL DEFAULT '',
 button_site VARCHAR(10) NOT NULL DEFAULT '',
-admin_login VARCHAR(25) NOT NULL DEFAULT '',
-admin_passw VARCHAR(10) NOT NULL DEFAULT '',
-tssitelist VARCHAR(10) NOT NULL DEFAULT '',
 banner_site VARCHAR(10) NOT NULL DEFAULT '',
 welcome_site VARCHAR(10) NOT NULL DEFAULT '',
 name_site VARCHAR(10) NOT NULL DEFAULT '',
@@ -72,7 +69,7 @@ android_site VARCHAR(10) NOT NULL DEFAULT '',
 PRIMARY KEY (id)
 ) ENGINE=MyISAM;";
 
-$inf_insertdbrow[1] = DB_TS3_SET." (host, query_port, port, admin_login, admin_passw, pass_site) VALUES('127.0.0.1', '10011', '9987', 'serveradmin', '', '')";
+$inf_insertdbrow[1] = DB_TS3_SET." (host, query_port, port) VALUES('127.0.0.1', '10011', '9987')";
 $inf_droptable[1] = DB_TS3_SET;
 
 // I do not wish to have the following translated for personal reasons.
@@ -90,7 +87,7 @@ Dort bieten wir den Support so wie Vorschläge und änderungen zu dieser Infusio
 [url=http://ts3admin.info]ts3admin[/url]
 
 Danke,
-SGI Fusion, PHPFusion Deutschland, HelekinPower, PlanetTeamspeak und ts3admin";
+SGI Fusion, PHPFusion Deutschland, HarlekinPower, PlanetTeamspeak und ts3admin";
 // End Comment
 
 $inf_insertdbrow[2] = DB_MESSAGES . " (message_to, message_from, message_subject, message_message, message_smileys, message_read, message_datestamp, message_folder) VALUES('" .
@@ -110,4 +107,3 @@ $inf_sitelink[1] = array(
 	"visibility" => "0" // 0 - Guest / 101 - Member / 102 - Admin / 103 - Super Admin.
 );
 ?>
-
