@@ -37,21 +37,33 @@
       
         <address><strong>Teamspeak&sup3; Overview 3rd Addon
 </strong><br>Authors: Septron, Harlekin, PlanetTeamspeak, ts3admin
-<br>Version: 1.5
+<br>Version: 1.6
 <br>PHP-Fusion: v7.02.xx
 <br>E-Mail: support@septron.de
-<br>Webseite: http://www.septron.de
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://www.septron.eu
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://www.septron.net
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://www.septron.org
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://www.septron.info
-<br><br>Supportseite: https://phpfusion-deutschland.de
-<br><br>Creditsites: http://harlekinpower.de
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://www.planetteamspeak.com
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://ts3admin.info
+<ul class="list-unstyled">
+      <li>Websites:
+        <ul>
+          <li>http://www.septron.de</li>
+          <li>http://www.septron.eu</li>
+          <li>http://www.septron.net</li>
+          <li>http://www.septron.org</li>
+          <li>http://www.septron.info</li>
+        </ul>
+      </li>
+      <li>Support Sites &amp; Creditsites:
+        <ul>
+          <li>http://www.phpfusion-deutschland.de</li>
+          <li>http://www.phpfusion-supportclub.de</li>
+          <li>http://harlekinpower.de</li>
+          <li>https://www.planetteamspeak.com</li>
+        </ul>
+      </li>
+    </ul>
 </address>
         </div>
       </div>
+
+
 <div class="row marketing">
         <div class="col-lg-12" id="install">
         <div class="page-header">
@@ -70,8 +82,6 @@ dort kannst du nun ein paar angaben machen<br /><br />
 Host: IP oder link des TS3 Server<br />
 Query Port: ist in den meisten f&uuml;llen immer 10011<br />
 Port: der Port deines TS3 Server (standart 9987)<br />
-Admin Name: dein Querylogin f&uuml;r deinen TS3 Server (wird f&uuml;r die serverliste ben&ouml;tigt)<br />
-Admin Passwort: dein Querypasswort (wird f&uuml;r die serverliste ben&ouml;tigt)<br />
 Join Passwort: dein Serverpasswort eingeben falls eingegeben<br />
 Die weiteren Auswahlfelder verstehen sich von selbst.<br /><br />
 
@@ -111,7 +121,7 @@ Um deinen TS&sup3; auch als Panel nutzen zu k&ouml;nnen musst du unter<br />
 Administration -> System -> Panels (Links oder Rechts) -> Neues Panel<br />
 Name (Deinen Panelnamen) -> Dateiname -> ts3_panel -> Admin Passwort eingeben -> Vorschau oder direkt Speichern.<br /><br />
 
-Solltest du ein Älteres Theme benutzen so suche in der <b>ts3_view.php</b> &amp; <b>ts3_panel.php</b> nach:
+Solltest du ein Älteres Theme benutzen so suche in der <b>style.css</b> nach:
 <figure class="highlight"><pre><code class="language-html" data-lang="html">
 #ts3_panel {
 margin: 0 auto;
@@ -129,8 +139,9 @@ overflow: hidden;
 padding: 0;
 width: 180px;
 }
-</code></pre></figure><br />
-
+</code></pre></figure>
+bei <b>180px</b> sollte eure genaue panelbreite eingetragen werden
+<br />
 <br />
 
 Das war es auch schon.<br /><br />
@@ -143,6 +154,16 @@ Das war es auch schon.<br /><br />
         <div class="page-header">
           <h2>Update Informationen</h2>
         </div>
+           <p><ul> 
+            <li>Version 1.6 (Sicherheits update)
+            	<ul>
+                    <li>- ts3_admin.php fixes</li>
+                    <li>- abfrage bugfixes</li>
+                    <li>- includes ordner entfernt</li>
+                    <li>- style.css hinzugef&uuml;gt</li>
+                    <li>- aus sicherheitsgr&uuml;nden wurde die adminclass entfernt</li>
+                </ul>
+         </ul></p>
           <p><ul> 
             <li>Version 1.5 
             	<ul>
@@ -236,15 +257,13 @@ Das war es auch schon.<br /><br />
         <div class="page-header">
           <h2>Changelog</h2>
         </div>
-          <p>- TS3 PHP Framework von: <a href="https://www.planetteamspeak.com/powerful-php-framework/" target="_blank">planetteamspeak.com</a><br />
-- ts3admin.class von: <a href="http://ts3admin.info/" target="_blank">ts3admin.info</a><br />
-</p>
+          <p>- TeamSpeak&sup3; PHP Framework von: <a href="https://www.planetteamspeak.com/powerful-php-framework/" target="_blank">planetteamspeak.com</a><br /></p>
 
         </div>
       </div>
 
       <div class="footer">
-        <p>Diese ReadMe wurde mit Hilfe des <a href="http://fusionreadmecreator.freezoy.com/" target="_blank">Fusion ReadMe Creator</a> erstellt. &copy; 2016</p>
+        <p>Powered by <a href="http://www.septron.de/" target="_blank">SGI Fusion</a> &copy; copyright 2008 - 2017 by Septron. All Rights Reserved.</p>
       </div>
 
     </div>
