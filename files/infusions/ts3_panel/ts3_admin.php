@@ -8,14 +8,14 @@
 | Filename: ts3_admin.php
 | Authors: Septron, Harlekin, PlanetTeamspeak
 | Support Website: http://www.septron.de
-|				   http://www.septron.eu
-|				   http://www.septron.net
-|				   http://www.septron.org
-|				   http://www.septron.info
-|				   http://www.phpfusion-deutschland.de
-|				   http://www.phpfusion-supportclub.de
-|				   http://www.harlekinpower.de
-|				   https://www.planetteamspeak.com
+|		   http://www.septron.eu
+|		   http://www.septron.net
+|		   http://www.septron.org
+|		   http://www.septron.info
+|		   http://www.phpfusion-deutschland.de
+|		   http://www.phpfusion-supportclub.de
+|		   http://www.harlekinpower.de
+|		   https://www.planetteamspeak.com
 +--------------------------------------------------------+
 | This program is released as free software under the
 | Affero GPL license. You can redistribute it and/or
