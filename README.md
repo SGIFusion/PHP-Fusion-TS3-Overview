@@ -10,10 +10,11 @@
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://www.septron.net
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://www.septron.org
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://www.septron.info
-<br><br>Supportseite: https://phpfusion-deutschland.de
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://www.blood-fighter.de
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://www.phpfusion-deutschland.de
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://www.phpfusion-supportclub.de
 <br><br>Creditsites: http://harlekinpower.de
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://www.planetteamspeak.com
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://ts3admin.info
 
 <h2>weitere Version</h2>
 Webseite: http://harlekinpower.de
@@ -32,8 +33,6 @@ dort kannst du nun ein paar angaben machen<br /><br />
 Host: IP oder link des TS3 Server<br />
 Query Port: ist in den meisten f&uuml;llen immer 10011<br />
 Port: der Port deines TS3 Server (standart 9987)<br />
-Admin Name: dein Querylogin f&uuml;r deinen TS3 Server (wird f&uuml;r die serverliste ben&ouml;tigt)<br />
-Admin Passwort: dein Querypasswort (wird f&uuml;r die serverliste ben&ouml;tigt)<br />
 Join Passwort: dein Serverpasswort eingeben falls eingegeben<br />
 Die weiteren Auswahlfelder verstehen sich von selbst.<br /><br />
 
@@ -73,7 +72,7 @@ Um deinen TS&sup3; auch als Panel nutzen zu k&ouml;nnen musst du unter<br />
 Administration -> System -> Panels (Links oder Rechts) -> Neues Panel<br />
 Name (Deinen Panelnamen) -> Dateiname -> ts3_panel -> Admin Passwort eingeben -> Vorschau oder direkt Speichern.<br /><br />
 
-Solltest du ein Älteres Theme benutzen so suche in der <b>ts3_view.php</b> &amp; <b>ts3_panel.php</b> nach:
+Solltest du ein älteres Theme benutzen so suche in der <b>style.css</b> nach:
 <figure class="highlight"><pre><code class="language-html" data-lang="html">
 #ts3_panel {
 margin: 0 auto;
@@ -91,14 +90,25 @@ overflow: hidden;
 padding: 0;
 width: 180px;
 }
-</code></pre></figure><br />
-
+</code></pre></figure>
+<p>bei <b>180px</b> sollte eure genaue panelbreite eingetragen werden</p>
+<br />
 <br />
 
 Das war es auch schon.<br /><br />
 </p>
 
 <h2>Update Informationen</h2>
+<p><ul> 
+            <li>Version 1.6 
+            	<ul>
+                    <li>- ts3_admin.php fixes</li>
+                    <li>- abfrage bugfixes</li>
+                    <li>- includes ordner entfernt</li>
+                    <li>- style.css hinzugef&uuml;gt</li>
+                    <li>- aus sicherheitsgr&uuml;nden wurde die adminclass entfernt</li>
+                </ul>
+         </ul></p>
 <p><ul> 
             <li>Version 1.5 
             	<ul>
@@ -187,5 +197,6 @@ Das war es auch schon.<br /><br />
 
 <h2>Changelog</h2>
 <p>- TS3 PHP Framework von: <a href="https://www.planetteamspeak.com/powerful-php-framework/" target="_blank">planetteamspeak.com</a><br />
-- ts3admin.class von: <a href="http://ts3admin.info/" target="_blank">ts3admin.info</a><br />
 </p>
+
+<p>Powered by <a href="http://www.septron.de/" target="_blank">SGI Fusion</a> &copy; copyright 2008 - 2017 by Septron. All Rights Reserved.</p>
