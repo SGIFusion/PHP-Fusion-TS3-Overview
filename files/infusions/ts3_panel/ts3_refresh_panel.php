@@ -6,16 +6,16 @@
 +--------------------------------------------------------+
 | Name: SGI Fusion TS3 Viewer (für v7.02.xx)
 | Filename: ts3_refresh_panel.php
-| Authors: Septron, Harlekin, PlanetTeamspeak, ts3admin
+| Authors: Septron, Harlekin, PlanetTeamspeak
 | Support Website: http://www.septron.de
-|				   http://www.septron.eu
-|				   http://www.septron.net
-|				   http://www.septron.org
-|				   http://www.septron.info
-|				   http://phpfusion-deutschland.de
-|				   http://harlekinpower.de
-|				   https://www.planetteamspeak.com
-|				   http://ts3admin.info
+|		   http://www.septron.eu
+|		   http://www.septron.net
+|		   http://www.septron.org
+|		   http://www.septron.info
+|		   http://www.phpfusion-deutschland.de
+|		   http://www.phpfusion-supportclub.de
+|		   http://www.harlekinpower.de
+|		   https://www.planetteamspeak.com
 +--------------------------------------------------------+
 | This program is released as free software under the
 | Affero GPL license. You can redistribute it and/or
@@ -41,139 +41,7 @@ header("Cache-Control: no-store, no-cache, must-revalidate");
 header("Cache-Control: post-check=0, pre-check=0", false);
 header("Pragma: no-cache");
 
-echo "<style type='text/css' media='screen'>
-  <!--
-    table.ts3_viewer {
-      width: 100%;
-      border: 0px;
-      border-collapse: collapse;
-    }
-    table.ts3_viewer td {
-      white-space: nowrap;
-      padding: 0px 0px 1px 0px;
-      border: 0px;
-    }
-    table.ts3_viewer td.corpus {
-      width: 100%;
-    }
-    table.ts3_viewer td.suffix {
-      vertical-align: top;
-    }
-    table.ts3_viewer td.suffix img {
-      padding-left: 2px;
-      vertical-align: top;
-    }
-	table.ts3_viewer td.spacer {
-      overflow: hidden;
-    }
-	table.ts3_viewer td.spacer.solidline {
-      background: url('".INFUSIONS."ts3_panel/images/viewer/spacer_solidline.gif');
-		background-repeat: repeat-x;
-    }
-    table.ts3_viewer td.spacer.dashline {
-      background: url('".INFUSIONS."ts3_panel/images/viewer/spacer_dashline.gif');
-		background-repeat: repeat-x;
-    }
-    table.ts3_viewer td.spacer.dashdotline {
-      background: url('".INFUSIONS."ts3_panel/images/viewer/spacer_dashdotline.gif');
-		background-repeat: repeat-x;
-    }
-    table.ts3_viewer td.spacer.dashdotdotline {
-      background: url('".INFUSIONS."ts3_panel/images/viewer/spacer_dashdotdotline.gif');
-		background-repeat: repeat-x;
-    }
-    table.ts3_viewer td.spacer.dotline {
-      background: url('".INFUSIONS."ts3_panel/images/viewer_sgifusion_metro/spacer_dotline.gif');
-		background-repeat: repeat-x;
-    }
-  -->
-  #ts3_panel {
-margin: 0 auto;
-overflow: hidden;
-padding: 0;
-width: 100%;
-}
-.btn-default {
-  color: #333;
-  background-color: #fff;
-  border-color: #ccc;
-}
-.btn-default:focus,
-.btn-default.focus {
-  color: #333;
-  background-color: #e6e6e6;
-  border-color: #8c8c8c;
-}
-.btn-default:hover {
-  color: #333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
-}
-.btn-default:active,
-.btn-default.active,
-.open > .dropdown-toggle.btn-default {
-  color: #333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
-}
-.btn-default:active:hover,
-.btn-default.active:hover,
-.open > .dropdown-toggle.btn-default:hover,
-.btn-default:active:focus,
-.btn-default.active:focus,
-.open > .dropdown-toggle.btn-default:focus,
-.btn-default:active.focus,
-.btn-default.active.focus,
-.open > .dropdown-toggle.btn-default.focus {
-  color: #333;
-  background-color: #d4d4d4;
-  border-color: #8c8c8c;
-}
-.btn-default:active,
-.btn-default.active,
-.open > .dropdown-toggle.btn-default {
-  background-image: none;
-}
-.btn-default.disabled:hover,
-.btn-default[disabled]:hover,
-fieldset[disabled] .btn-default:hover,
-.btn-default.disabled:focus,
-.btn-default[disabled]:focus,
-fieldset[disabled] .btn-default:focus,
-.btn-default.disabled.focus,
-.btn-default[disabled].focus,
-fieldset[disabled] .btn-default.focus {
-  background-color: #fff;
-  border-color: #ccc;
-}
-.btn-default .badge {
-  color: #fff;
-  background-color: #333;
-}
-  .btn-lg,
-.btn-group-lg > .btn {
-  padding: 10px 16px;
-  font-size: 18px;
-  line-height: 1.3333333;
-  border-radius: 6px;
-}
-.btn-sm,
-.btn-group-sm > .btn {
-  padding: 5px 10px;
-  font-size: 12px;
-  line-height: 1.5;
-  border-radius: 3px;
-}
-.btn-xs,
-.btn-group-xs > .btn {
-  padding: 1px 5px;
-  font-size: 12px;
-  line-height: 1.5;
-  border-radius: 3px;
-}
-  </style>";
-
-#openside($locale['ts3over022']);
+echo '<link rel="stylesheet" href="'.INFUSIONS.'ts3_panel/style.css">';
 
 echo '<div id="ts3_panel">';
 //DATABASE START
@@ -190,7 +58,7 @@ while($data = dbarray($sdata_panel)) {
 try
 {
 	$ts3_VirtualServer = TeamSpeak3::factory("serverquery://".$host.":".$query_port."/?server_port=".$port."#no_query_clients");
-	echo "<span style='font-size: 9px; color: #000000;'>".$ts3_VirtualServer->getViewer(new TeamSpeak3_Viewer_Html("".INFUSIONS."ts3_panel/images/viewer/", "".INFUSIONS."ts3_panel/images/flags/", "data:image"))."</span>";
+	echo "<span style='font-size: 9px;>".$ts3_VirtualServer->getViewer(new TeamSpeak3_Viewer_Html("".INFUSIONS."ts3_panel/framework/images/viewer/", "".INFUSIONS."ts3_panel/framework/images/flags/", "data:image"))."</span>";
 	echo "<br />";
 	if ($panel_button == "1") {
 		if (iMEMBER) {
@@ -205,5 +73,4 @@ catch(Exception $e)
   echo '<center><b>'.$locale['ts3over015'].'</b></center>';
 }
 echo '</div>';
-#closeside();
 ?>
