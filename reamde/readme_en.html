@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>TeamSpeak&sup3; Infusion ReadMe</title>
+    
+    <!-- Wenn CSS Source Daten direkt in den Download gepackt werden
+    Auskommentieren und in den Downloadordner legen -->
+     
+    <link href="bootstrap.css" rel="stylesheet">
+    <link href="jumbotron-narrow.css" rel="stylesheet">
+    
+    <!--<link href="http://fusionreadmecreator.freezoy.com/readme_source_data/css/bootstrap.css" rel="stylesheet">
+    <link href="http://fusionreadmecreator.freezoy.com/readme_source_data/jumbotron-narrow.css" rel="stylesheet">-->
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="#install">Installation</a></li>
+          <li><a href="#updates">Updates</a></li>
+          <li><a href="#developer">Developer</a></li>
+        </ul>
+        <h3 class="text-muted">TeamSpeak&sup3; Infusion
+</h3>
+      </div>
+      
+      <div class="row marketing">
+        <div class="col-lg-12">
+      
+        <address><strong>TeamSpeak&sup3; Overview 3rd Addon
+</strong><br>Developer: Septron, Harlekin &amp; PlanetTeamspeak
+<br>Version: 1.6
+<br>PHP-Fusion: v7.02.xx
+<br>PHP-Version: Min. 5.2.x (Max. 5.6.x)
+<br> MySQL: Min. 4.0.x
+<br>E-Mail: support@septron.de
+<ul class="list-unstyled">
+      <li>Websites:
+        <ul>
+          <li>https://www.septron.de</li>
+          <li>http://www.septron.eu</li>
+          <li>http://www.septron.net</li>
+          <li>http://www.septron.org</li>
+          <li>http://www.septron.info</li>
+        </ul>
+      </li>
+      <li>Support Sites:
+        <ul>
+          <li>https://www.phpfusion-deutschland.de</li>
+          <li>https://www.phpfusion-supportclub.de</li>
+          <li>https://harlekinpower.de</li>
+        </ul>
+      </li>
+      <li>Framework Developer Site:
+        <ul>
+          <li>https://www.planetteamspeak.com</li>
+        </ul>
+      </li>
+    </ul>
+</address>
+        </div>
+      </div>
+
+
+<div class="row marketing">
+        <div class="col-lg-12" id="install">
+        <div class="page-header">
+          <h2>Installation</h2>
+        </div>
+          <p>Load the folder under the files folder and the infusions folder<br />
+to your main directory of PHP-Fusion.<br /><br />
+
+Now go to your administration -> System -> Infusions<br /><br />
+
+Install -> ts3_panel<br /><br />
+
+then call in your administration on infusions -> Teamspeak 3<br />
+there you can now make a few entries<br /><br />
+
+Host: IP or link of the TS3 Server<br />
+Query Port: is usually 10011<br />
+Port: the port of your TS3 server (standard 9987)<br />
+Join Passwort: enter your server password if available<br />
+The other selection fields are self-explanatory.<br /><br />
+
+click Save Done.<br /><br />
+
+now you can<br />
+Administration -> System -> Site Links -> Current navigation links<br />
+And edit it if it is only displayed in the navigation panel<br />
+Or in the header and the navigation panel or in the header as well as in a new tab / window.<br /><br />
+Now you should go to your TeamSpeak&sup3; server (VirtualServer or TeamSpeak&sup3; Hoster)<br />
+and there yours <b>whitelist.txt</b> open and enter your domain or the domain IP (Example: Domain = septron.de - IP = 127.0.0.1).<br /><br />
+Now you have definitely the problem and get a message of because of: Error Code: 2568 insufficient client permissions etc.<br />
+Description for your Right TeamSpeak&sup3; guest right this is from <a href="https://www.tsviewer.com/index.php?page=faq&id=6&newlanguage=en" target="_blank">TSViewer</a>
+This error message says that one or more rights the TSViewer does not need on the server are allowed.<br />
+<b>Step 1 - enable Advanced permission system</b><br />
+Open the TeamSpeak 3 client. Click at the top menubar on <b>Settings</b> and then <b>Options</b>. The Options window is now open.<br />
+Click there then on the left sidebar on <b>Application</b> put there then under <b>Misc</b> a check mark at <b>Advanced permission system</b>.<br />
+Close now the Options window with a click on the <b>OK</b> Button.<br />
+<img src="https://static.tsviewer.com/images/faq/2568_advanced_permissions_en.png"><br /><br />
+<b>Step 2 - allow the permissions</b><br />
+Dont be suprised, an fresh installed TS3 server does not have this permissions allowed by default. Thats why almost everybody does see this error code 2568 error message<br />
+when he wants to use a TSViewer. The following screenshot shows which permissions have to be allowed additionally:<br />
+<img src="https://static.tsviewer.com/images/faq/2568_permissions_en.png"><br /><br />
+Connect to your TeamSpeak 3 server and open this window by clicking in the top menubar on <b>Permissions</b> and then <b>Server Groups</b>.<br />
+First change the display of the permissions to <b>Show names</b> (Dropdown menu in the center at the bottom of this window).<br />
+Select now on the left side at <b>Server Group</b> the <b>Guest (8)</b>.<br />
+In the center, the mainarea of this window you see the complete permissions of your server divided into categories (Global, Virtual Server, Channel, Group, ...).<br />
+Those you can fold out to see which further subcategories and permissions you can find there.<br />
+Search now the permissions in their categories and <b>allow them</b> as displayed in the screenshot (by doubleclicking it, a check mark at <b>Value </b> will get set automatically,<br />
+with that the permission is allowed then). Should the permission have been already added (black instead of grey text)<br />
+and a check mark be missing at <b>Value</b> then allow this permission by setting the check mark at <b>Value</b>.<br />
+Actually this is it then. Refresh the TSViewer and see if it does work now. Should it still be not working and the error code 2568 error message still be there then continue reading.<br />
+If this still does not work, click the TSViewer link and read the <a href="https://www.tsviewer.com/index.php?page=faq&id=6&newlanguage=en" target="_blank">FAQ</a>.<br /><br />
+
+To be able to use your TS3 also as a panel you must under<br />
+Administration -> System -> Panels (left or right) -> New Panel<br />
+Name (Your Panelnamen) -> Filename -> ts3_panel -> Enter admin password -> Preview or directly save.<br /><br />
+
+If you are using an older theme, please search in the <b>style.css</b> for:
+<figure class="highlight"><pre><code class="language-html" data-lang="html">
+#ts3_panel {
+margin: 0 auto;
+overflow: hidden;
+padding: 0;
+width: 100%;
+}
+</code></pre></figure><br />
+
+Replace it as follows:
+<figure class="highlight"><pre><code class="language-html" data-lang="html">
+#ts3_panel {
+margin: 0 auto;
+overflow: hidden;
+padding: 0;
+width: 180px;
+}
+</code></pre></figure>
+At <b>180px</b>, your exact panel width should be entered
+<br />
+<br />
+
+That's it already.<br /><br />
+</p>
+
+        </div>
+
+
+        <div class="col-lg-12" id="updates">
+        <div class="page-header">
+          <h2>Update Information</h2>
+        </div>
+           <p><ul> 
+            <li>Version 1.6 (Security update)
+            	<ul>
+                    <li>- ts3_admin.php fixes</li>
+                    <li>- query bugfixes</li>
+                    <li>- includes Folder removed</li>
+                    <li>- style.css added</li>
+                    <li>- For security reasons the adminclass was removed</li>
+                </ul>
+         </ul></p>
+          <p><ul> 
+            <li>Version 1.5 
+            	<ul>
+                    <li>- ts3_panel.php edit and bugfixes</li>
+                    <li>- ts3_panel.php 20 seconds refresh added</li>
+                    <li>- ts3_refresh_panel.php added</li>
+                </ul>
+         </ul></p>
+          <p><ul> 
+            <li>Version 1.4 
+            	<ul>
+                    <li>- ts3_admin.php bugfixes</li>
+                    <li>- abfrage bugfixes</li>
+                    <li>- ts3_view.php edit</li>
+                </ul>
+         </ul></p>
+          <p><ul> 
+            <li>Version 1.3 
+            	<ul>
+            		<li>- Changes all files</li>
+                	<li>- cache Folder has been removed</li>
+                    <li>- data Folder has been removed</li>
+                    <li>- statusviewer Folder has been removed</li>
+                    <li>- tsstatus Folder has been removed</li>
+                    <li>- ts3.info.php has been removed</li>
+                    <li>- config.inc.php Has been removed from the includes folder</li>
+                    <li>- config.php Has been removed from the includes folder</li>
+                    <li>- funktions.php Has been removed from the includes folder</li>
+                    <li>- functions_sgif.php Has been removed from the includes folder</li>
+                    <li>- Server Icons Are automatically displayed</li>
+                    <li>- Button in the Show/Hide panel has been added in the t3_admin.php</li>
+                    <li>- Button in the page link Show/Hide was added in the t3_admin.php</li>
+                    <li>- Serverlist Show/Hide was added in the t3_admin.php</li>
+                    <li>- Serverbanner Show/Hide was added in the t3_admin.php</li>
+                    <li>- Welcome message Show/Hide has been added to the t3_admin.php</li>
+                    <li>- Servername Show/Hide was added in the t3_admin.php</li>
+                    <li>- Server IP Show/Hide has been added in the t3_admin.php</li>
+                    <li>- ServerHort Show/Hide has been added in the t3_admin.php</li>
+                    <li>- Security Level Show/Hide has been added in the t3_admin.php</li>
+                    <li>- Server version Show/ Hide has been added in the t3_admin.php</li>
+                    <li>- Server platform Show/Hide has been added to the t3_admin.php</li>
+                    <li>- Server Status Shoe/Hide has been added to the t3_admin.php</li>
+                    <li>- Server creation Show/Hide has been added in the t3_admin.php</li>
+                    <li>- Server Online time Show/Hide has been added in the t3_admin.php</li>
+                    <li>- Server restart Show/Hide has been added in the t3_admin.php</li>
+                    <li>- Server Ping Show/Hide has been added in the t3_admin.php</li>
+                    <li>- Server User Show/Hide has been added in the t3_admin.php</li>
+                    <li>- Server Channel Show/Hide has been added in the t3_admin.php</li>
+                    <li>- Server Monthly data transfer Show/Hide has been added in the t3_admin.php</li>
+                    <li>- Server Packet data transfer Show/Hide has been added in the t3_admin.php</li>
+                    <li>- Server Voice data transfer Show/Hide has been added in the t3_admin.php</li>
+                    <li>- Server file data transfer Show/Hide has been added in the t3_admin.php</li>
+                    <li>- Server total transfer Show/Hide has been added in the t3_admin.php</li>
+                    <li>- Enter server password has been added in the t3_admin.php</li>
+                    <li>- Server password Show/Hide has been added in the t3_admin.php</li>
+                    <li>- Server Smartphone users Show/Hide has been added in the t3_admin.php (Currently only Android)</li>
+                    <li>- Copyrights were added in the page link as well as in the admin area</li>
+                </ul>
+         </ul></p>
+          <p><ul> 
+            <li>Version 1.2 
+            	<ul>
+                    <li>- E-mail callback removed</li>
+                    <li>- Panel viewer added (Tsstatus folder was used)</li>
+                    <li>- Deactivated code removed</li>
+                    <li>- Query Login the Viewer removed</li>
+                    <li>- Added version check in the t3_admin.php</li>
+                    <li>- Other modifacts with <a href="http://harlekinpower.de/" target="_blank">Harlekin</a> discussed</li>
+                </ul>
+         </ul></p>
+          <p><ul> 
+            <li>Version 1.1 
+            	<ul>
+            		<li>- Changes to the English and German files</li>
+                	<li>- Optimize the files</li>
+                    <li>- E-mail Callback disabled</li>
+                </ul>
+         </ul></p>
+          <p><ul> 
+            <li>Version 1.0 
+            	<ul>
+            		<li>- Added German language file</li>
+                	<li>- English language file has been added</li>
+                </ul>
+         </ul></p>
+        </div>
+        
+
+        
+        <div class="col-lg-12" id="developer">
+        <div class="page-header">
+          <h2>Framework Developer</h2>
+        </div>
+          <p>- TeamSpeak&sup3; PHP Framework from: <a href="https://www.planetteamspeak.com/powerful-php-framework/" target="_blank">planetteamspeak.com</a><br /></p>
+
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>Powered by <a href="http://www.septron.de/" target="_blank">SGI Fusion</a> &copy; copyright 2008 - 2017 by Septron. All Rights Reserved.</p>
+      </div>
+
+    </div>
+  </body>
+</html>
